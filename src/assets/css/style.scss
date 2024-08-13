@@ -1,0 +1,203 @@
+html{
+  scroll-behavior: smooth !important;
+}
+
+  /* width */
+.dropbox::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  // box-shadow: inset 0 0 5px grey; 
+  background-color: white;
+  // border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 217, 0); 
+  // border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 217, 0); 
+}
+    
+.tf-button {
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    background: transparent;
+    font-family: "Chakra Petch", sans-serif;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    height: auto;
+    border: none;
+    font-size: 15px;
+  }
+  .tf-button .boder-fade {
+    position: absolute;
+    transition: all 0.1s;
+    border: 2px solid #ffd909;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    left: 0;
+    top: 0;
+  }
+  .tf-button-bg {
+    background: #ffd909;
+    color: #333;
+  }
+  .tf-button-bg:hover {
+    color: #fff;
+    background: transparent;
+  }
+  .tf-button .effect {
+    display: block;
+  }
+  .tf-button.btn-effect::before {
+    left: 50%;
+    top: 0;
+    transition-duration: 0.3s;
+    z-index: 1;
+  }
+  .tf-button::before,
+  .tf-button::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #fff;
+  }
+  .tf-button.btn-effect .effect::before {
+    left: 0;
+    top: 50%;
+    transition-duration: 0.3s;
+  }
+  .tf-button.btn-effect .effect::after {
+    right: 0;
+    top: 50%;
+    transition-duration: 0.3s;
+  }
+  .tf-button .effect::before,
+  .tf-button .effect::after {
+    content: "";
+    width: 2px;
+    height: 0;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #fff;
+  }
+  .tf-button:hover {
+    color: #fff;
+    transition: all 0.3s;
+  }
+  .tf-button.btn-effect:hover::after,
+  .tf-button.btn-effect:hover::before {
+    left: 0;
+  }
+  .tf-button.btn-effect:hover .effect::after,
+  .tf-button.btn-effect:hover .effect::before {
+    top: 0;
+  }
+  .tf-button:hover::before,
+  .tf-button:hover::after {
+    width: 100%;
+  }
+  .tf-button:hover .effect::before,
+  .tf-button:hover .effect::after {
+    height: 100%;
+  }
+  .tf-button::after {
+    margin-top: 8px;
+  }
+  .neoh_fn_down {
+    position: absolute;
+    bottom: 24px;
+    z-index: 15;
+    text-decoration: none;
+    color: #eee;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: var(--hff);
+    letter-spacing: 1px;
+    padding-top: 60px;
+  }
+  .neoh_fn_down:hover .icon:after {
+    background-color: rgb(238, 202, 0);
+  }
+  .neoh_fn_down .icon {
+    position: absolute;
+    display: block;
+    top: -16px;
+    left: 50%;
+    width: 18px;
+    height: 40px;
+    color: #aaa;
+    margin-left: -9px;
+    -webkit-animation: bottomArrow 1.5s infinite;
+    animation: bottomArrow 1.5s infinite;
+    transition: all 0.3s ease;
+  }
+  .neoh_fn_down .icon:after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 40px;
+    background-color: #aaa;
+    left: 50%;
+    margin-left: -1px;
+    transition: all 0.3s ease;
+  }
+  .neoh_fn_down .fn__svg {
+    position: absolute;
+    display: block;
+    bottom: -4px;
+    transform: rotate(90deg);
+    left: 50%;
+    margin-left: -9px;
+    z-index: 3;
+  }
+  @keyframes bottomArrow {
+    0% {
+      transform: translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translate(0px, 20px);
+      opacity: 0;
+    }
+  }
+  @keyframes topArrow {
+    0% {
+      transform: translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translate(0px, -20px);
+      opacity: 0;
+    }
+  }
+  .inner-corner {
+    transition: all;
+    transition-duration: 0.3s;
+  }
+  .corner:hover .inner-corner{
+    width: 0;
+  }
+  
+  .map::-webkit-scrollbar {
+  width: 0px;
+}
